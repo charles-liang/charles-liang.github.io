@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% include head.meta %}
+
+    <link href='{{ site.w3c_url }}css/markdown.css' rel='stylesheet' type='text/css'/>
+    <link href='{{ site.w3c_url }}css/rouge.css' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" type="text/css" href="{{ site.w3c_url }}css/base.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.w3c_url }}css/post.css">
+    <style type="text/css">
+        .center-aside .header-image {
+            background-image: url({{ site.w3c_url }}images/bg2.jpg);
+        }
+    </style>
+</head>
+
+<body>
+{% assign _post = page %}
+{% include post-image.liquid %}
+<img src="{{ post-image }}" style="display:none;"/>
+<div class="content">
+    <div class="pin"><span><a href="javascript:void(0);">up</a></span>
+    </div>
+    <div class="top-aside">
+    </div>
+    <div class="center-aside">
+        <div class="header-image">
+            <a style="display:block;height:100%;" href="{{ site.base }}" title="Go Home"></a>
+        </div>
+        <div class="author">
+            <span>
+                <a class="avatar" href="{{ site.base }}">
+                    <img src="{{ site.w3c_url }}images/avator.jpg" alt="100" title="About Me"/>
+                </a>
+            </span>
+            <span class="info">
+                <span>
+                <a class="author-name blue-link" href="{{ site.base }}">
+                    <h2>{{ site.title }}</h2>
+                </a></span>
+                <span>
+                    {{site.description}}
+                </span>
+            </span>
+        </div>
+        <div class="title">{{ page.title }}</div>
+        <div class="meta">
+            <span class="wordage">字数·{{ page.content | number_of_words }}</span>
+            <!-- <span class="views-count">阅读5448</span> -->
+        </div>
+
+        <div class="post">
+            {{ content }}
+        </div>
+
+        <div class="post-footer">
+            <p>&copy; {{ site.title }}</p>
+        </div>
+
+        <div class="post-tags">
+            TAGS:
+            {% assign _post = page %}
+            {% include post-categories.liquid %}
+            {% for tag in post-categories %}
+            <span class="tag"><a href="{{ site.base }}/?category={{ tag }}">{{ tag }}</a></span>
+            {% endfor %}
+        </div>
+
+        <div class="PageNavigation">
+            {% if page.previous.url %}
+            <a class="prev" href="{{ page.previous.url }}">&nbsp;&laquo; {{ page.previous.title }}</a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="next" href="{{ page.next.url }}">{{ page.next.title }} &raquo;&nbsp;</a>
+            {% endif %}
+        </div>
+
+        <div style="height: 20px;"></div>
+        <div class="ds-share flat" data-thread-key="{{ page.pid }}" data-title="{{ page.title }}"
+             data-images="{{ image_url }}" data-content="{{ post.excerpt | strip | replace:'"
+        ', "'" | strip_newlines }}" data-url="{{ site.domain }}{{ page.url }}">
+        <div class="footer">
+            <div class="copyright">
+                <p> <span class="light-black">Thanks to </span><a class="light-black" href="https://github.com/">Github</a>, <a class="light-black"
+                                                                                                                                href="https://jekyllrb.com/">Jekyll</a>
+                    and <a class="light-black" href="https://github.com/jokinkuang/stepbystep/">StepByStep v{{ site.version
+                        }}</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- jQuery -->
+<script type="text/javascript">
+    var sitefile = "{{ site.sitefile }}";
+</script>
+<script src="{{ site.jquery_url }}"></script>
+<script src="{{ site.w3c_url }}js/timeago.js"></script>
+<script src="{{ site.w3c_url }}js/pagecache.js"></script>
+<script>
+    $(".pin").on("click", function (event) {
+        var target = $("html, body");
+        if (target.length) {
+            event.preventDefault();
+            $("html, body").stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+    $(window).scroll(function (event) {
+        var top = $(window).scrollTop();
+        var target = $("body");
+        if (target.length) {
+            if (target.scrollTop() > 2000) {
+                $(".pin").show();
+            } else {
+                $(".pin").hide();
+            }
+        }
+    });
+</script>
+</body>
+</html>

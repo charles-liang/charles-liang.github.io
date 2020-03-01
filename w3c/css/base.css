@@ -1,0 +1,94 @@
+.author .avatar {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.author h2 {
+    border-bottom-style: none;
+}
+
+html {
+    display: block;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x:scroll
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.author .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.footer .copyright p {
+    margin: 0;
+    font-size: 17px;
+}
+
+.author {
+    margin-top: 10px;
+    padding-left: 8px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
+    font-size: 15px;
+    color: #999999;
+}
+
+.author .info {
+    margin-top: 7px;
+    letter-spacing: 1px;
+}
+
+.author .info .talk {
+    margin: 3px 0 0;
+}
+
+.author .info .talk img {
+    vertical-align: initial;
+}
+a.blue-link, a.blue-link:hover, a.blue-link:visited {
+    color: #4094c7;
+}
+a.grey-link, a.grey-link:hover, a.grey-link:visited {
+    color: #999999;
+}
+a.dark-grey-link, a.dark-grey-link:hover, a.dark-grey-link:visited {
+    color: #717171;
+}
+a.light-white, a.light-white:hover, a.light-white:visited {
+    color: rgba(255, 255, 255, 0.25);
+}
+a.white, a.white:hover, a.white:visited {
+    color: white;
+}
+a.light-black, a.light-black:hover, a.light-black:visited {
+    color: rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px)
+{
+    .footer .copyright p {
+        font-size: 10px;
+    }
+}

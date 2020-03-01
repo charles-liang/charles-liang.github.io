@@ -1,0 +1,125 @@
+
+.content {
+	line-height: 20px;
+	color: #413838;
+}
+.pin {
+	position: fixed;
+	right: 10px;
+	z-index: 100;
+	bottom: 40%;
+	display: none;
+}
+.pin span {
+	border: 1px solid #999999;
+  border-radius: 100%;
+  padding: 2px;
+}
+/****** post ******/
+.center-aside {
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.center-aside .header-image {
+	height: 200px;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+.center-aside .author {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding-left: 8px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eeeeee;
+	overflow: hidden;
+	font-size: 15px;
+	color: #999999;
+}
+
+
+.center-aside .author .info {
+	margin-top: 7px;
+	letter-spacing: 1px;
+}
+.center-aside .author .info .talk{
+	margin: 0;
+	margin-top: 3px;
+}
+.center-aside .author .info .talk img{
+  vertical-align: initial;
+}
+.center-aside .title {
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: 10px 0;
+	text-align: center;
+}
+.center-aside .meta {
+	margin: 10px 0 20px 0;
+	text-align: center;
+}
+.center-aside .meta span {
+	position: relative;
+	top: 1px;
+	margin-right: 10px;
+	font-size: 13px;
+	color: #999999;
+}
+.center-aside .post {
+	padding: 0px 10px;
+	line-height: 1.5em;
+	color: #413838;
+}
+.post-footer {
+	text-align: center;
+  margin-top: 50px;
+  padding-bottom: 20px
+}
+.post-tags {
+	margin: 5px 10px;
+}
+.post-tags span.tag {
+	border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 2px;
+	line-height: 1.8em;
+	margin-left: 5px;
+}
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+	padding: 0 5px;
+}
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+.PageNavigation .next {
+	float: right;
+  text-align: right;
+}
+
+ul.nostyle {
+	margin-left: 0;
+	padding-left: 20px;
+	list-style: none;
+}
+a, a:hover, a:visited {
+	color: #bf8b8b;
+	text-decoration: none;
+	cursor: auto;
+}
+@media (max-width: 768px)
+{
+	.center-aside {
+		width: 100%;
+	}
+}
